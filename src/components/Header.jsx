@@ -14,6 +14,7 @@ import {
 } from '@headlessui/react'
 import clsx from 'clsx'
 
+import { CalMeetingButton } from '@/components/CalMeetingButton'
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.png'
 
@@ -117,7 +118,6 @@ function MobileNavigation(props) {
             <MobileNavItem href="/about">About</MobileNavItem>
             <MobileNavItem href="/articles">Articles</MobileNavItem>
             <MobileNavItem href="/projects">Projects</MobileNavItem>
-            <MobileNavItem href="/uses">Uses</MobileNavItem>
           </ul>
         </nav>
       </PopoverPanel>
@@ -155,7 +155,6 @@ function DesktopNavigation(props) {
         <NavItem href="/about">About</NavItem>
         <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/uses">Uses</NavItem>
       </ul>
     </nav>
   )
@@ -403,34 +402,32 @@ export function Header() {
               </div>
               <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto flex items-center gap-2">
-                <button
-  onClick={() => setIsOpen(!isOpen)}
-  className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
-  aria-label="Toggle terminal"
->
-  <svg
-    viewBox="0 0 24 24"
-    className="h-6 w-6 fill-teal-400/10 stroke-teal-500 transition 
-      group-hover:stroke-teal-600
-      dark:fill-zinc-700 dark:stroke-zinc-500 
-      dark:group-hover:stroke-zinc-400"
-  >
-    <path
-      d="M3 7c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="m8 10 3 3-3 3M13 16h3"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-</button>
-                  <ThemeToggle />
+                  <CalMeetingButton />
+                  <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+                    aria-label="Toggle terminal"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-6 w-6 fill-teal-400/10 stroke-teal-500 transition group-hover:stroke-teal-600 dark:fill-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400"
+                    >
+                      <path
+                        d="M3 7c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="m8 10 3 3-3 3M13 16h3"
+                        fill="none"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  {/* <ThemeToggle /> */}
                 </div>
               </div>
             </div>
