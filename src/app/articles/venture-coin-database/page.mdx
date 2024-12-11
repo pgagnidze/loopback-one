@@ -1,0 +1,60 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Papuna Gagnidze',
+  date: '2022-02-09',
+  title: 'Venture coin database',
+  description: 'For lazy investors'
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+I'll be sharing my investing journey with all the ups and downs. I have realized losses on meme stocks and hype trains multiple times. However, I still have more unrealized gains than actual losses at this time of the writing. My weekend project below is yet another attempt to become a better investor.
+
+## Stage one - Genesis 
+
+I remember the time in 2018 when I cherry-picked the coins from the first hundred listed in the CoinMarketCap based on gut feeling, intuition, and a little bit of research. In a search for the next Bitcoin and Ethereum, I revised the list multiple times and shrank it to 24 carefully chosen coins, from which only a third are still in the first hundred:
+
+* XRP
+* Stellar
+* Monero
+* IOTA
+* EOS
+* Zcash
+* Basic Attention Token
+* NEM
+
+After realizing my losses for covering the high-interest loan, I started exploring the stock market. I went through all the phases, starting from stock-picking, meme stocks, and thematic ETFs. I finally became a boglehead and maintained a lazy, two funds portfolio with equities and bonds with global exposure. (Whew, I never thought that I would write a similar statement, it always looked like some words glued together randomly) 
+
+## Stage two - Arrival
+
+I again started thinking about finding the hidden gems, but now in an enormous pile of scams and rug-pulls, or just plain awful projects. I opened up CoinMarketCap several times, but I got lost in the pages and thousands of new projects each time, which always ended with more confusion and uncertainty.
+
+I decided to trust companies with a lot of capital and expertise. Logically, I built an integration between the CoinMarketCap and Notion database, which fetches coins based on a couple of big players' portfolios. This approach has various drawbacks such are:
+
+* Miss out on the potentially good projects that are not part of big players' portfolios
+* Big players can afford to lose more than an individual investor; some of their projects may not be that good
+* A good project doesn't always mean a good investment, 
+
+I would recommend researching the individual coins, despite them appearing in the big players' portfolios. Consider the Notion database as a starting point, a simplified version of the coin list.
+
+The **Coinsearch** Notion database is publicly available [here](https://coinsearch.notion.site/4f4b8a047e9b4c988dd5bd02c3d4ef92), automatically updated daily. Currently, it lists all the coins from the following portfolios:
+
+* Binance Labs
+* Huobi Capital
+* Coinbase Ventures
+
+You can open the specific coin to view more details. However, they'll be empty at the time of this writing. Hopefully, I'll be adding other pieces of information for individual coins as I begin to research them. 
+
+## Notes
+
+The source code for the integration is open [here](https://github.com/pgagnidze/coinsearch) if anyone is interested in behind-scenes.
+
+## Update:
+
+UST deppeged and Luna followed its downfall, as it should have, but too much. This is an excellent example of how a carefully evaluated project can fail us. After finding the project you like, follow the project development and community events, sort Reddit threads by controversial and read opposite ideas from time to time.
