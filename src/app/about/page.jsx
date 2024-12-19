@@ -99,7 +99,7 @@ export default function About() {
               Follow on GitHub
             </SocialLink>
             <SocialLink
-              href="https://www.linkedin.com/in/papunagagnidze"
+              href="https://www.linkedin.com/in/papuna-gagnidze"
               icon={LinkedInIcon}
               className="mt-4"
             >
