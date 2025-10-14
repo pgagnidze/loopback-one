@@ -22,7 +22,7 @@ import logoTbcBank from '@/images/logos/tbc-bank.jpg'
 // Project logos
 import logoOwloops from '@/images/logos/owloops.jpg'
 import logoEna from '@/images/logos/ena.jpg'
-import logoBolbo from '@/images/logos/bolbo.jpg'
+import logoBolbo from '@/images/logos/bolbo.svg'
 import logoAIPrintedArt from '@/images/logos/ai-printed-art.svg'
 import logoFalseKin from '@/images/logos/falsekin.jpg'
 

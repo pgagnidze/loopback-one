@@ -1,0 +1,59 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pixel art letter B in circle -->
+
+  <!-- Outer circle ring (darker green) -->
+  <rect x="20" y="4" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="28" y="4" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="36" y="4" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="12" y="12" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="44" y="12" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="4" y="20" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="52" y="20" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="4" y="28" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="52" y="28" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="4" y="36" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="52" y="36" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="12" y="44" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="44" y="44" width="8" height="8" fill="#4d6a4f"/>
+  <rect x="20" y="52" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="28" y="52" width="8" height="8" fill="#2d6a4f"/>
+  <rect x="36" y="52" width="8" height="8" fill="#2d6a4f"/>
+
+  <!-- Circle background (light gray/white) -->
+  <rect x="20" y="12" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="28" y="12" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="36" y="12" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="12" y="20" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="20" y="20" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="28" y="20" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="36" y="20" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="44" y="20" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="12" y="28" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="20" y="28" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="28" y="28" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="36" y="28" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="44" y="28" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="12" y="36" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="20" y="36" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="28" y="36" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="36" y="36" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="44" y="36" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="20" y="44" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="28" y="44" width="8" height="8" fill="#e2e8f0"/>
+  <rect x="36" y="44" width="8" height="8" fill="#e2e8f0"/>
+
+  <!-- Letter B in green -->
+  <!-- Left vertical bar -->
+  <rect x="20" y="20" width="8" height="8" fill="#38a169"/>
+  <rect x="20" y="28" width="8" height="8" fill="#38a169"/>
+  <rect x="20" y="36" width="8" height="8" fill="#38a169"/>
+  <!-- Top curve -->
+  <rect x="28" y="20" width="8" height="8" fill="#38a169"/>
+  <rect x="36" y="20" width="8" height="8" fill="#38a169"/>
+  <rect x="36" y="28" width="8" height="8" fill="#38a169"/>
+  <!-- Middle bar -->
+  <rect x="28" y="28" width="8" height="8" fill="#38a169"/>
+  <!-- Bottom curve -->
+  <rect x="28" y="36" width="8" height="8" fill="#38a169"/>
+  <rect x="36" y="36" width="8" height="8" fill="#38a169"/>
+</svg>
