@@ -1,0 +1,20 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pixel art terminal icon -->
+
+  <!-- Terminal window border -->
+  <rect x="8" y="12" width="48" height="4" fill="#475569"/>
+  <rect x="8" y="48" width="48" height="4" fill="#475569"/>
+  <rect x="8" y="16" width="4" height="32" fill="#475569"/>
+  <rect x="52" y="16" width="4" height="32" fill="#475569"/>
+
+  <!-- Terminal window background -->
+  <rect x="12" y="16" width="40" height="32" fill="#1e293b"/>
+
+  <!-- Command prompt ">" -->
+  <rect x="16" y="24" width="4" height="4" fill="#64748b"/>
+  <rect x="20" y="28" width="4" height="4" fill="#64748b"/>
+  <rect x="16" y="32" width="4" height="4" fill="#64748b"/>
+
+  <!-- Cursor/command line -->
+  <rect x="28" y="28" width="12" height="4" fill="#f97316"/>
+</svg>

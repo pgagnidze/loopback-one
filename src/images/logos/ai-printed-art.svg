@@ -1,0 +1,26 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Elegant rounded pixel art palette/printer icon -->
+
+  <!-- Outer rounded container -->
+  <rect x="16" y="16" width="8" height="8" fill="#94a3b8"/>
+  <rect x="40" y="16" width="8" height="8" fill="#94a3b8"/>
+  <rect x="16" y="40" width="8" height="8" fill="#94a3b8"/>
+  <rect x="40" y="40" width="8" height="8" fill="#94a3b8"/>
+
+  <rect x="24" y="12" width="16" height="4" fill="#94a3b8"/>
+  <rect x="12" y="24" width="4" height="16" fill="#94a3b8"/>
+  <rect x="48" y="24" width="4" height="16" fill="#94a3b8"/>
+  <rect x="24" y="48" width="16" height="4" fill="#94a3b8"/>
+
+  <!-- Main surface -->
+  <rect x="16" y="24" width="32" height="16" fill="#cbd5e1"/>
+  <rect x="24" y="16" width="16" height="32" fill="#cbd5e1"/>
+
+  <!-- Elegant color palette (minimalist) -->
+  <rect x="20" y="28" width="8" height="8" fill="#f97316"/>
+  <rect x="28" y="28" width="8" height="8" fill="#64748b"/>
+  <rect x="36" y="28" width="8" height="8" fill="#94a3b8"/>
+
+  <!-- Paper/output slot -->
+  <rect x="28" y="40" width="8" height="4" fill="#475569"/>
+</svg>

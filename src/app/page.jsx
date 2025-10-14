@@ -1,209 +1,144 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Newsletter } from '@/components/Newsletter';
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
+  SubstackIcon,
   XIcon,
 } from '@/components/SocialIcons'
+
+// Work history logos
+import logoKlipy from '@/images/logos/klipy.jpg'
 import logoOpenreel from '@/images/logos/openreel.jpg'
-import logoToptal from '@/images/logos/toptal.jpg'
+import logoOctoAI from '@/images/logos/octoai.jpg'
+import logoGeoSTQB from '@/images/logos/geostqb.jpg'
 import logoCastingNetworks from '@/images/logos/casting-networks.jpg'
 import logoTbcBank from '@/images/logos/tbc-bank.jpg'
-import logoGeoSTQB from '@/images/logos/geostqb.jpg'
-import logoPSC from '@/images/logos/psc.jpg'
-import logoDelta from '@/images/logos/delta.jpg'
-import { getAllArticles } from '@/lib/articles'
-import { formatDate } from '@/lib/formatDate'
 
-function BriefcaseIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-      />
-      <path
-        d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
-
-function ArrowDownIcon(props) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
-function Article({ article }) {
-  return (
-    <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
-    </Card>
-  )
-}
+// Project logos
+import logoOwloops from '@/images/logos/owloops.jpg'
+import logoEna from '@/images/logos/ena.jpg'
+import logoBolbo from '@/images/logos/bolbo.jpg'
+import logoAIPrintedArt from '@/images/logos/ai-printed-art.svg'
+import logoFalseKin from '@/images/logos/falsekin.jpg'
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+      <Icon className="h-6 w-6 fill-zinc-400 transition group-hover:fill-zinc-300" />
     </Link>
   )
 }
 
-function Role({ role }) {
-  let startLabel =
-    typeof role.start === 'string' ? role.start : role.start.label
-  let startDate =
-    typeof role.start === 'string' ? role.start : role.start.dateTime
-
-  let endLabel = typeof role.end === 'string' ? role.end : role.end.label
-  let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime
-
+function LinkIcon(props) {
   return (
-    <li className="flex gap-4">
-      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 bg-white dark:bg-white dark:border-zinc-700/50 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
-      </div>
-      <dl className="flex flex-auto flex-wrap gap-x-2">
-        <dt className="sr-only">Company</dt>
-        <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-          {role.company}
-        </dd>
-        <dt className="sr-only">Role</dt>
-        <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-          {role.title}
-        </dd>
-        <dt className="sr-only">Date</dt>
-        <dd
-          className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-          aria-label={`${startLabel} until ${endLabel}`}
-        >
-          <time dateTime={startDate}>{startLabel}</time>{' '}
-          <span aria-hidden="true">—</span>{' '}
-          <time dateTime={endDate}>{endLabel}</time>
-        </dd>
-      </dl>
-    </li>
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
+        fill="currentColor"
+      />
+    </svg>
   )
 }
 
-function Resume() {
-  let resume = [
-    {
-      company: 'OpenReel',
-      title: 'DevOps Engineer',
-      logo: logoOpenreel,
-      start: '2020',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
-    },
-    {
-      company: 'Toptal',
-      title: 'DevOps/QA Engineer',
-      logo: logoToptal,
-      start: '2019',
-      end: 'Present',
-    },
-    {
-      company: 'GeoSTQB',
-      title: 'Co-Founder',
-      logo: logoGeoSTQB,
-      start: '2019',
-      end: 'Present',
-    },
-    {
-      company: 'Casting Networks',
-      title: 'DevOps/QA Engineer',
-      logo: logoCastingNetworks,
-      start: '2019',
-      end: '2020',
-    },
-    {
-      company: 'TBC Bank',
-      title: 'DevOps/QA Engineer',
-      logo: logoTbcBank,
-      start: '2018',
-      end: '2019',
-    },
-    {
-      company: 'Product Savvy Consulting',
-      title: 'DevOps/QA Engineer',
-      logo: logoPSC,
-      start: '2017',
-      end: '2018',
-    },
-    {
-      company: 'Delta Comm',
-      title: 'NOC Engineer',
-      logo: logoDelta,
-      start: '2016',
-      end: '2017',
-    },
-  ]
+const workProjects = [
+  {
+    name: 'Klipy',
+    description:
+      'Architected multi-region infrastructure for the world\'s largest short-form media content hub, serving billions of GIF and sticker API requests with 95% latency reduction and 20x performance improvements globally.',
+    logo: logoKlipy,
+    link: { href: 'https://klipy.com/en-US', label: 'klipy.com' },
+  },
+  {
+    name: 'OpenReel',
+    description:
+      'Leading remote video creation platform for enterprises. Achieved 25% overall cost savings and 75% S3 cost reduction, enhanced database security through AWS CDK, and improved disaster recovery by migrating infrastructure to IaC. Acquired by Banzai in 2024.',
+    logo: logoOpenreel,
+    link: { href: 'https://www.openreel.com', label: 'openreel.com' },
+  },
+  {
+    name: 'OctoAI',
+    description:
+      'Machine learning platform spun out of the University of Washington by the creators of Apache TVM. Developed custom endpoints and conducted usability tests, identifying critical bugs that led to important system fixes. Acquired by Nvidia in 2024.',
+    logo: logoOctoAI,
+    link: { href: 'https://octo.ai/', label: 'octo.ai' },
+  },
+  {
+    name: 'GeoSTQB',
+    description:
+      'As co-founder, helped establish the Georgian Software Testing Qualifications Board, administering ISTQB certification and accrediting training providers. Certified over 100 IT professionals within the first two years.',
+    logo: logoGeoSTQB,
+    link: { href: 'https://geostqb.org/', label: 'geostqb.org' },
+  },
+  {
+    name: 'Casting Networks',
+    description:
+      'Leading casting and audition management software provider facilitating over a million auditions annually. Managed a team of 5 Senior QA Automation Engineers, maintained testing frameworks for a 3-million-user application, and implemented optimized tests for datasets up to 4 million records.',
+    logo: logoCastingNetworks,
+    link: { href: 'https://www.castingnetworks.com/', label: 'castingnetworks.com' },
+  },
+  {
+    name: 'TBC',
+    description:
+      'Global award-winning mobile banking app serving customers in Georgia. Managed a team of 10 QA engineers, created JMeter load testing scenarios, and developed UI and API automation scripts using Selenium WebDriver and Java.',
+    logo: logoTbcBank,
+    link: { href: 'https://tbcbank.ge/en-US', label: 'tbcbank.ge' },
+  }
+]
 
-  return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
-      </h2>
-      <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <Role key={roleIndex} role={role} />
-        ))}
-      </ol>
-      <Button href="/Papuna-Gagnidze.pdf" variant="secondary" className="group mt-6 w-full">
-        Download Resume
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
-    </div>
-  )
-}
+const personalProjects = [
+  {
+    name: 'False Kin',
+    description:
+      'A comprehensive guide that breaks down the complexity of Caves of Qud into digestible knowledge for new players.',
+    link: { href: 'https://falsekin.notion.site/qud-survival-guide', label: 'falsekin.notion.site' },
+    logo: logoFalseKin,
+  },
+  {
+    name: 'Owloops',
+    description:
+      'Open source browser automation framework with AI-driven test creation and recorder integration.',
+    link: { href: 'https://github.com/owloops', label: 'github.com/owloops' },
+    logo: logoOwloops,
+  },
+  {
+    name: 'Bolbo',
+    description:
+      'Online multiplayer 2D football game using peer-to-peer technology for seamless gameplay experience.',
+    link: { href: 'https://bolbo.live/', label: 'bolbo.live' },
+    logo: logoBolbo,
+  },
+  {
+    name: 'Ena',
+    description:
+      'A programming language for Georgians, making coding more accessible by allowing developers to write code in their native language with familiar syntax.',
+    link: { href: 'https://ena-lang.org/', label: 'ena-lang.org' },
+    logo: logoEna,
+  },
+  {
+    name: 'AI Printed Art',
+    description:
+      'One of the first text-to-product AI generator platforms, transforming text descriptions into physical art pieces.',
+    link: { href: 'https://youtube.com/shorts/dmbboR47-c4', label: 'Short Demo' },
+    logo: logoAIPrintedArt,
+  },
+]
 
-export default async function Home() {
-  let articles = (await getAllArticles()).slice(0, 4)
-
+export default function Home() {
   return (
     <>
+      {/* Hero Section */}
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
             DevOps Engineer, QA Expert, and Open Source Maintainer
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Papuna, a DevOps engineer based in Georgia. With a strong foundation in Linux and network engineering, 
+          <p className="mt-6 text-base text-zinc-400">
+            I&apos;m Papuna, founder of Loopback - a professional services company based in Georgia. With a strong foundation in Linux and network engineering,
             I build scalable infrastructure and open source tools that make development and testing more accessible.
           </p>
           <div className="mt-6 flex gap-6">
@@ -222,19 +157,77 @@ export default async function Home() {
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
+            <SocialLink
+              href="https://papu.substack.com"
+              aria-label="Read on Substack"
+              icon={SubstackIcon}
+            />
+          </div>
+          <div className="mt-6">
+            <Button href="/Papuna-Gagnidze.pdf" variant="secondary" className="group">
+              Download Resume
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" className="ml-2 h-4 w-4 stroke-zinc-400 transition group-hover:stroke-zinc-50 group-active:stroke-zinc-50">
+                <path
+                  d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Button>
           </div>
         </div>
       </Container>
+
+      {/* Projects Section */}
       <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
-            <Resume />
+        <div className="mx-auto max-w-2xl lg:max-w-5xl">
+          <div className="space-y-20">
+            <section>
+              <h2 className="text-2xl font-bold tracking-tight text-zinc-100 mb-8">
+                Notable Work Projects
+              </h2>
+              <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+                {workProjects.map((project) => (
+                  <Card as="li" key={project.name}>
+                    <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 border border-zinc-700/50">
+                      <Image src={project.logo} alt="" className="h-8 w-8" unoptimized />
+                    </div>
+                    <h2 className="mt-6 text-base font-semibold text-zinc-100">
+                      <Card.Link href={project.link.href} target="_blank" rel="noopener noreferrer">{project.name}</Card.Link>
+                    </h2>
+                    <Card.Description>{project.description}</Card.Description>
+                    <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-200 transition group-hover:text-teal-500">
+                      <LinkIcon className="h-6 w-6 flex-none" />
+                      <span className="ml-2">{project.link.label}</span>
+                    </p>
+                  </Card>
+                ))}
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold tracking-tight text-zinc-100 mb-8">
+                Personal & Open Source
+              </h2>
+              <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+                {personalProjects.map((project) => (
+                  <Card as="li" key={project.name}>
+                    <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 border border-zinc-700/50">
+                      <Image src={project.logo} alt="" className="h-8 w-8" unoptimized />
+                    </div>
+                    <h2 className="mt-6 text-base font-semibold text-zinc-100">
+                      <Card.Link href={project.link.href} target="_blank" rel="noopener noreferrer">{project.name}</Card.Link>
+                    </h2>
+                    <Card.Description>{project.description}</Card.Description>
+                    <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-200 transition group-hover:text-teal-500">
+                      <LinkIcon className="h-6 w-6 flex-none" />
+                      <span className="ml-2">{project.link.label}</span>
+                    </p>
+                  </Card>
+                ))}
+              </ul>
+            </section>
           </div>
         </div>
       </Container>
