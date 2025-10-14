@@ -101,8 +101,8 @@ const personalProjects = [
   {
     name: 'Owloops',
     description:
-      'Open source browser automation framework with AI-driven test creation and recorder integration.',
-    link: { href: 'https://github.com/owloops', label: 'github.com/owloops' },
+      'Collection of CLI tools for website monitoring, cloud deployments, and AWS infrastructure orchestration.',
+    link: { href: 'https://owloops.com', label: 'owloops.com' },
     logo: logoOwloops,
   },
   {
