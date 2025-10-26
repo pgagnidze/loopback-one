@@ -42,9 +42,9 @@ export function TerminalComponent() {
       help: () =>
         'Available commands: help, about, skills, projects, clear, history, whoami, pwd, date, echo, game',
       about: () =>
-        'DevOps engineer passionate about solving tech challenges.\n' +
-        'Co-founder of GeoSTQB, creator of the Georgian programming language "Ena", and maintainer of open source automation tools.\n' +
-        'Interested in making complex systems more approachable through education and automation.',
+        'Solo founder building Loopback and its portfolio of open source projects.\n' +
+        'Primary focus: Owloops - CLI tools for DevOps automation and cloud infrastructure.\n' +
+        'Also creating projects at the intersection of education, gaming, and accessibility.',
       skills: () =>
         'Main Skills:\n' +
         '• DevOps & Cloud: AWS, IaC, Kubernetes, Docker\n' +
@@ -52,11 +52,11 @@ export function TerminalComponent() {
         '• Languages: JavaScript/TypeScript, Python, Bash, Lua, Go\n' +
         '• Core: Linux Administration, Network Engineering, Full Stack Development',
       projects: () =>
-        'Notable Projects:\n' +
-        '• Owloops: Browser automation framework with AI-driven test creation\n' +
+        'Loopback Projects:\n' +
+        '• Owloops [CORE]: CLI tools for DevOps automation, monitoring, and AWS infrastructure\n' +
         '• Ena: Georgian programming language making coding accessible\n' +
-        '• False Kin: Comprehensive guide for Caves of Qud\n' +
         '• Bolbo: P2P multiplayer football game\n' +
+        '• False Kin: Comprehensive guide for Caves of Qud\n' +
         '• AI Printed Art: Text-to-product AI platform',
       clear: () => {
         setOutput([{ type: 'output', content: asciiArt }])

@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
@@ -10,14 +9,6 @@ import {
   SubstackIcon,
   XIcon,
 } from '@/components/SocialIcons'
-
-// Work history logos
-import logoKlipy from '@/images/logos/klipy.jpg'
-import logoOpenreel from '@/images/logos/openreel.jpg'
-import logoOctoAI from '@/images/logos/octoai.jpg'
-import logoGeoSTQB from '@/images/logos/geostqb.jpg'
-import logoCastingNetworks from '@/images/logos/casting-networks.jpg'
-import logoTbcBank from '@/images/logos/tbc-bank.jpg'
 
 // Project logos
 import logoOwloops from '@/images/logos/owloops.jpg'
@@ -45,65 +36,21 @@ function LinkIcon(props) {
   )
 }
 
-const workProjects = [
-  {
-    name: 'Klipy',
-    description:
-      'Architected multi-region infrastructure for the world\'s largest short-form media content hub, serving billions of GIF and sticker API requests with 95% latency reduction and 20x performance improvements globally.',
-    logo: logoKlipy,
-    link: { href: 'https://klipy.com/en-US', label: 'klipy.com' },
-  },
-  {
-    name: 'OpenReel',
-    description:
-      'Leading remote video creation platform for enterprises. Achieved 25% overall cost savings and 75% S3 cost reduction, enhanced database security through AWS CDK, and improved disaster recovery by migrating infrastructure to IaC. Acquired by Banzai in 2024.',
-    logo: logoOpenreel,
-    link: { href: 'https://www.openreel.com', label: 'openreel.com' },
-  },
-  {
-    name: 'OctoAI',
-    description:
-      'Machine learning platform spun out of the University of Washington by the creators of Apache TVM. Developed custom endpoints and conducted usability tests, identifying critical bugs that led to important system fixes. Acquired by Nvidia in 2024.',
-    logo: logoOctoAI,
-    link: { href: 'https://octo.ai/', label: 'octo.ai' },
-  },
-  {
-    name: 'GeoSTQB',
-    description:
-      'As co-founder, helped establish the Georgian Software Testing Qualifications Board, administering ISTQB certification and accrediting training providers. Certified over 100 IT professionals within the first two years.',
-    logo: logoGeoSTQB,
-    link: { href: 'https://geostqb.org/', label: 'geostqb.org' },
-  },
-  {
-    name: 'Casting Networks',
-    description:
-      'Leading casting and audition management software provider facilitating over a million auditions annually. Managed a team of 5 Senior QA Automation Engineers, maintained testing frameworks for a 3-million-user application, and implemented optimized tests for datasets up to 4 million records.',
-    logo: logoCastingNetworks,
-    link: { href: 'https://www.castingnetworks.com/', label: 'castingnetworks.com' },
-  },
-  {
-    name: 'TBC',
-    description:
-      'Global award-winning mobile banking app serving customers in Georgia. Managed a team of 10 QA engineers, created JMeter load testing scenarios, and developed UI and API automation scripts using Selenium WebDriver and Java.',
-    logo: logoTbcBank,
-    link: { href: 'https://tbcbank.ge/en-US', label: 'tbcbank.ge' },
-  }
-]
+const primaryProject = {
+  name: 'Owloops',
+  description:
+    'Open source CLI tools for DevOps automation, website monitoring, cloud deployments, and AWS infrastructure orchestration. Previously offered cloud SaaS version.',
+  link: { href: 'https://owloops.com', label: 'owloops.com' },
+  logo: logoOwloops,
+}
 
-const personalProjects = [
+const additionalProjects = [
   {
-    name: 'False Kin',
+    name: 'Ena',
     description:
-      'A comprehensive guide that breaks down the complexity of Caves of Qud into digestible knowledge for new players.',
-    link: { href: 'https://falsekin.notion.site/qud-survival-guide', label: 'falsekin.notion.site' },
-    logo: logoFalseKin,
-  },
-  {
-    name: 'Owloops',
-    description:
-      'Collection of CLI tools for website monitoring, cloud deployments, and AWS infrastructure orchestration.',
-    link: { href: 'https://owloops.com', label: 'owloops.com' },
-    logo: logoOwloops,
+      'A programming language for Georgians, making coding more accessible by allowing developers to write code in their native language with familiar syntax.',
+    link: { href: 'https://ena-lang.org/', label: 'ena-lang.org' },
+    logo: logoEna,
   },
   {
     name: 'Bolbo',
@@ -113,11 +60,11 @@ const personalProjects = [
     logo: logoBolbo,
   },
   {
-    name: 'Ena',
+    name: 'False Kin',
     description:
-      'A programming language for Georgians, making coding more accessible by allowing developers to write code in their native language with familiar syntax.',
-    link: { href: 'https://ena-lang.org/', label: 'ena-lang.org' },
-    logo: logoEna,
+      'A comprehensive guide that breaks down the complexity of Caves of Qud into digestible knowledge for new players.',
+    link: { href: 'https://falsekin.notion.site/qud-survival-guide', label: 'falsekin.notion.site' },
+    logo: logoFalseKin,
   },
   {
     name: 'AI Printed Art',
@@ -135,11 +82,10 @@ export default function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
-            DevOps Engineer, QA Expert, and Open Source Maintainer
+            Building Open Source Tools for DevOps and Automation
           </h1>
           <p className="mt-6 text-base text-zinc-400">
-            I&apos;m Papuna, founder of Loopback - a professional services company based in Georgia. With a strong foundation in Linux and network engineering,
-            I build scalable infrastructure and open source tools that make development and testing more accessible.
+            I&apos;m Papuna, solo founder building Owloops (DevOps automation tools) and various side projects. Some solve real problems, others are just fun to make.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -163,72 +109,57 @@ export default function Home() {
               icon={SubstackIcon}
             />
           </div>
-          <div className="mt-6">
-            <Button href="/Papuna-Gagnidze.pdf" variant="secondary" className="group">
-              Download Resume
-              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" className="ml-2 h-4 w-4 stroke-zinc-400 transition group-hover:stroke-zinc-50 group-active:stroke-zinc-50">
-                <path
-                  d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Button>
-          </div>
         </div>
       </Container>
 
       {/* Projects Section */}
-      <Container className="mt-24 md:mt-28">
+      <Container className="mt-16 md:mt-20">
         <div className="mx-auto max-w-2xl lg:max-w-5xl">
-          <div className="space-y-20">
-            <section>
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-100 mb-8">
-                Notable Work Projects
-              </h2>
-              <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-                {workProjects.map((project) => (
-                  <Card as="li" key={project.name}>
-                    <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 border border-zinc-700/50">
-                      <Image src={project.logo} alt="" className="h-8 w-8" unoptimized />
-                    </div>
-                    <h2 className="mt-6 text-base font-semibold text-zinc-100">
-                      <Card.Link href={project.link.href} target="_blank" rel="noopener noreferrer">{project.name}</Card.Link>
-                    </h2>
-                    <Card.Description>{project.description}</Card.Description>
-                    <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-200 transition group-hover:text-teal-500">
-                      <LinkIcon className="h-6 w-6 flex-none" />
-                      <span className="ml-2">{project.link.label}</span>
-                    </p>
-                  </Card>
-                ))}
-              </ul>
-            </section>
+          <h2 className="text-2xl font-bold tracking-tight text-zinc-100 mb-12">
+            Projects
+          </h2>
 
-            <section>
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-100 mb-8">
-                Personal & Open Source
-              </h2>
-              <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-                {personalProjects.map((project) => (
-                  <Card as="li" key={project.name}>
-                    <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 border border-zinc-700/50">
-                      <Image src={project.logo} alt="" className="h-8 w-8" unoptimized />
-                    </div>
-                    <h2 className="mt-6 text-base font-semibold text-zinc-100">
-                      <Card.Link href={project.link.href} target="_blank" rel="noopener noreferrer">{project.name}</Card.Link>
-                    </h2>
-                    <Card.Description>{project.description}</Card.Description>
-                    <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-200 transition group-hover:text-teal-500">
-                      <LinkIcon className="h-6 w-6 flex-none" />
-                      <span className="ml-2">{project.link.label}</span>
-                    </p>
-                  </Card>
-                ))}
-              </ul>
-            </section>
-          </div>
+          {/* Featured Project */}
+          <Card className="mb-16 p-8">
+            <div className="flex items-start gap-6">
+              <div className="relative z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 border border-zinc-700/50 overflow-hidden">
+                <Image src={primaryProject.logo} alt="" className="h-12 w-12 object-contain" unoptimized />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-zinc-100">
+                  <Card.Link href={primaryProject.link.href} target="_blank" rel="noopener noreferrer">
+                    {primaryProject.name}
+                  </Card.Link>
+                </h3>
+                <Card.Description className="mt-3">{primaryProject.description}</Card.Description>
+                <p className="relative z-10 mt-4 flex text-sm font-medium text-zinc-200 transition group-hover:text-teal-500">
+                  <LinkIcon className="h-6 w-6 flex-none" />
+                  <span className="ml-2">{primaryProject.link.label}</span>
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          {/* Other Projects Grid */}
+          <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2">
+            {additionalProjects.map((project) => (
+              <Card as="li" key={project.name}>
+                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 border border-zinc-700/50">
+                  <Image src={project.logo} alt="" className="h-8 w-8" unoptimized />
+                </div>
+                <h2 className="mt-6 text-base font-semibold text-zinc-100">
+                  <Card.Link href={project.link.href} target="_blank" rel="noopener noreferrer">
+                    {project.name}
+                  </Card.Link>
+                </h2>
+                <Card.Description>{project.description}</Card.Description>
+                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-200 transition group-hover:text-teal-500">
+                  <LinkIcon className="h-6 w-6 flex-none" />
+                  <span className="ml-2">{project.link.label}</span>
+                </p>
+              </Card>
+            ))}
+          </ul>
         </div>
       </Container>
     </>
