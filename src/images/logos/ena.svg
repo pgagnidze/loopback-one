@@ -1,23 +1,28 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
   <!-- Unique minimal symbol for Ena with asymmetric middle bar -->
+  <!-- Background -->
+  <rect x="0" y="0" width="64" height="64" fill="#2E3440"/>
 
-  <!-- Top bar - full width -->
-  <rect x="22" y="22" width="4" height="4" fill="#88C0D0"/>
-  <rect x="26" y="22" width="4" height="4" fill="#88C0D0"/>
-  <rect x="30" y="22" width="4" height="4" fill="#88C0D0"/>
-  <rect x="34" y="22" width="4" height="4" fill="#88C0D0"/>
-  <rect x="38" y="22" width="4" height="4" fill="#88C0D0"/>
+  <!-- Top bar - full width (made bigger with 6px blocks) -->
+  <rect x="14" y="14" width="6" height="6" fill="#88C0D0"/>
+  <rect x="20" y="14" width="6" height="6" fill="#88C0D0"/>
+  <rect x="26" y="14" width="6" height="6" fill="#88C0D0"/>
+  <rect x="32" y="14" width="6" height="6" fill="#88C0D0"/>
+  <rect x="38" y="14" width="6" height="6" fill="#88C0D0"/>
+  <rect x="44" y="14" width="6" height="6" fill="#88C0D0"/>
 
   <!-- Middle bar - shorter -->
-  <rect x="26" y="30" width="4" height="4" fill="#88C0D0"/>
-  <rect x="30" y="30" width="4" height="4" fill="#88C0D0"/>
-  <rect x="34" y="30" width="4" height="4" fill="#88C0D0"/>
-  <rect x="38" y="30" width="4" height="4" fill="#88C0D0"/>
+  <rect x="20" y="26" width="6" height="6" fill="#88C0D0"/>
+  <rect x="26" y="26" width="6" height="6" fill="#88C0D0"/>
+  <rect x="32" y="26" width="6" height="6" fill="#88C0D0"/>
+  <rect x="38" y="26" width="6" height="6" fill="#88C0D0"/>
+  <rect x="44" y="26" width="6" height="6" fill="#88C0D0"/>
 
   <!-- Bottom bar - full width -->
-  <rect x="22" y="38" width="4" height="4" fill="#88C0D0"/>
-  <rect x="26" y="38" width="4" height="4" fill="#88C0D0"/>
-  <rect x="30" y="38" width="4" height="4" fill="#88C0D0"/>
-  <rect x="34" y="38" width="4" height="4" fill="#88C0D0"/>
-  <rect x="38" y="38" width="4" height="4" fill="#88C0D0"/>
+  <rect x="14" y="38" width="6" height="6" fill="#88C0D0"/>
+  <rect x="20" y="38" width="6" height="6" fill="#88C0D0"/>
+  <rect x="26" y="38" width="6" height="6" fill="#88C0D0"/>
+  <rect x="32" y="38" width="6" height="6" fill="#88C0D0"/>
+  <rect x="38" y="38" width="6" height="6" fill="#88C0D0"/>
+  <rect x="44" y="38" width="6" height="6" fill="#88C0D0"/>
 </svg>
