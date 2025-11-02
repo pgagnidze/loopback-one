@@ -12,7 +12,7 @@ import {
 
 // Project logos
 import logoOwloops from '@/images/logos/owloops.jpg'
-import logoEna from '@/images/logos/ena.jpg'
+import logoEna from '@/images/logos/ena.svg'
 import logoBolbo from '@/images/logos/bolbo.svg'
 import logoAIPrintedArt from '@/images/logos/ai-printed-art.svg'
 import logoFalseKin from '@/images/logos/falsekin.jpg'
