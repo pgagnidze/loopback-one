@@ -5,8 +5,7 @@ const FEATURED_PROJECTS = [
       'Open source CLI tools for DevOps automation, website monitoring, cloud deployments, and AWS infrastructure orchestration.',
     url: 'https://github.com/owloops',
     label: 'github.com/owloops',
-    logo: '/owloops.svg',
-    tags: ['Go', 'TypeScript', 'DevOps', 'AWS']
+    logo: '/owloops.svg'
   },
   {
     name: 'Luanvil',
@@ -14,8 +13,7 @@ const FEATURED_PROJECTS = [
       'Production-ready Lua libraries and tools for HTTP servers, cross-platform binary compilation, and dotfile management.',
     url: 'https://github.com/luanvil',
     label: 'github.com/luanvil',
-    logo: '/luanvil.svg',
-    tags: ['Lua', 'HTTP', 'Cross-platform']
+    logo: '/luanvil.svg'
   }
 ]
 
@@ -25,32 +23,28 @@ const PROJECTS = [
     description: 'A programming language for Georgians, making coding accessible in their native language.',
     url: 'https://ena-lang.org/',
     label: 'ena-lang.org',
-    logo: '/ena.svg',
-    tags: ['Language', 'Education']
+    logo: '/ena.svg'
   },
   {
     name: 'Bolbo',
     description: 'Online multiplayer 2D football game using peer-to-peer technology.',
     url: 'https://bolbo.live/',
     label: 'bolbo.live',
-    logo: '/bolbo.svg',
-    tags: ['Game', 'P2P']
+    logo: '/bolbo.svg'
   },
   {
     name: 'False Kin',
     description: 'A comprehensive guide that breaks down the complexity of Caves of Qud.',
     url: 'https://falsekin.notion.site/qud-survival-guide',
     label: 'falsekin.notion.site',
-    logo: '/falsekin.png',
-    tags: ['Guide', 'Gaming']
+    logo: '/falsekin.png'
   },
   {
     name: 'AI Printed Art',
     description: 'One of the first text-to-product AI generator platforms.',
     url: 'https://youtube.com/shorts/dmbboR47-c4',
     label: 'youtube.com',
-    logo: '/ai-printed-art.svg',
-    tags: ['AI', 'E-commerce']
+    logo: '/ai-printed-art.svg'
   }
 ]
 
@@ -149,7 +143,11 @@ function initContent() {
   container.innerHTML = html
 }
 
+const SHOW_GITHUB_STARS = false
+
 async function fetchGitHubStats() {
+  if (!SHOW_GITHUB_STARS) return
+
   try {
     const response = await fetch('https://raw.githubusercontent.com/pgagnidze/pgagnidze/main/README.md')
     if (!response.ok) return
