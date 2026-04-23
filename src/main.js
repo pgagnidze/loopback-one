@@ -24,27 +24,6 @@ const PROJECTS = [
     url: 'https://ena-lang.org/',
     label: 'ena-lang.org',
     logo: '/ena.svg'
-  },
-  {
-    name: 'Bolbo',
-    description: 'Online multiplayer 2D football game using peer-to-peer technology.',
-    url: 'https://bolbo.live/',
-    label: 'bolbo.live',
-    logo: '/bolbo.svg'
-  },
-  {
-    name: 'False Kin',
-    description: 'A comprehensive guide that breaks down the complexity of Caves of Qud.',
-    url: 'https://falsekin.notion.site/qud-survival-guide',
-    label: 'falsekin.notion.site',
-    logo: '/falsekin.png'
-  },
-  {
-    name: 'AI Printed Art',
-    description: 'One of the first text-to-product AI generator platforms.',
-    url: 'https://youtube.com/shorts/dmbboR47-c4',
-    label: 'youtube.com',
-    logo: '/ai-printed-art.svg'
   }
 ]
 
@@ -85,10 +64,7 @@ Also creating projects at the intersection of education, gaming, and accessibili
   projects: () => `Loopback Projects:
 • Owloops [CORE]: CLI tools for DevOps automation, monitoring, and AWS infrastructure
 • Luanvil: Production-ready Lua tools and libraries
-• Ena: Georgian programming language making coding accessible
-• Bolbo: P2P multiplayer football game
-• False Kin: Comprehensive guide for Caves of Qud
-• AI Printed Art: Text-to-product AI platform`,
+• Ena: Georgian programming language making coding accessible`,
 
   whoami: () => 'guest@loopback.one',
 
